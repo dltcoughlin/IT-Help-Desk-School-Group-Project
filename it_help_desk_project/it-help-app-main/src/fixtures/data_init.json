@@ -1,0 +1,330 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$t7660U08JBBpPcSUulHvKx$7/iZn+i7mfsjluDMJKor89aDHnJXokezMK1+4iqkDwY=",
+        "last_login": "2022-04-16T08:34:28.637Z",
+        "is_superuser": true,
+        "username": "Jared",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-04-16T08:06:52.415Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$Y0ufx3OBLe5OzANcPlUJOa$tv5pFn6Dypda7LStgIOv3ANoOqlglWrdUb9IZTesH8w=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Shannon",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-04-16T08:07:45Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$bVDqAHv1APdkg91yjRyKI9$mpBd+hv9ItxIid4I0OsfVURCZ1R5DRnpGTZB5SoqvZg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Jaelyn",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-04-16T08:08:07Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 4,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$4IQXUQfaOsglAVuRJvHwnA$TkYtPzwPcFzrdhgWEY11yTPDRM1S+76EPf/3GAbyOSs=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Nelly",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-04-16T08:08:19Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 5,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$PvGfZYXbaiTBtcdMXYQhm1$51K4IvOlLb3MCFtODqIT2Tqn+OL43lGApxuuvmhtcUY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Zoe",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-04-16T08:08:30Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$cKMO6GPt5jwWltNiCgFnsJ$vTSBNgL3mXkxGYFBxOmtgy3rwCINCjI5EEU0AgybsRI=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "admin_tester",
+            "first_name": "Test",
+            "last_name": "Account",
+            "email": "admin@example.org",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-04-24T01:35:58.871Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 1,
+      "fields": {
+        "is_assigned": false,
+        "status": "O",
+        "priority": "R",
+        "title": "First Ticket",
+        "description": "this is number 1",
+        "date_created": "2022-04-16T08:10:10.213Z",
+        "last_checked": null,
+        "due_date": "2022-04-21T00:00:00Z",
+        "date_closed": null
+      }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 2,
+      "fields": {
+        "is_assigned": true,
+        "status": "C",
+        "priority": "R",
+        "title": "Closed Ticket",
+        "description": "This should be closed out",
+        "date_created": "2022-04-16T08:10:38.914Z",
+        "last_checked": null,
+        "due_date": "2022-04-21T00:00:00Z",
+        "date_closed": "2022-04-16T08:14:46Z"
+      }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 3,
+      "fields": {
+        "is_assigned": false,
+        "status": "O",
+        "priority": "U",
+        "title": "I need help",
+        "description": "this is an urgent ticket",
+        "date_created": "2022-04-16T08:11:49.319Z",
+        "last_checked": null,
+        "due_date": "2022-04-19T00:00:00Z",
+        "date_closed": null
+      }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 4,
+      "fields": {
+        "is_assigned": false,
+        "status": "O",
+        "priority": "E",
+        "title": "Everything is on FIRE",
+        "description": "This is an emergency!!!",
+        "date_created": "2022-04-16T08:12:09.675Z",
+        "last_checked": null,
+        "due_date": "2022-04-17T00:00:00Z",
+        "date_closed": null
+      }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 5,
+      "fields": {
+        "is_assigned": true,
+        "status": "O",
+        "priority": "R",
+        "title": "Ticket Assigned",
+        "description": "This ticket it assigned to Jared",
+        "date_created": "2022-04-16T08:12:39.883Z",
+        "last_checked": null,
+        "due_date": "2022-04-21T00:00:00Z",
+        "date_closed": null
+      }
+    },
+    {
+      "model": "src.ticket",
+      "pk": 6,
+      "fields": {
+        "is_assigned": true,
+        "status": "O",
+        "priority": "R",
+        "title": "The Tech Needs Help",
+        "description": "Ticket assigned to Jared and Nelly",
+        "date_created": "2022-04-16T08:13:33.934Z",
+        "last_checked": null,
+        "due_date": "2022-04-21T00:00:00Z",
+        "date_closed": null
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 1,
+      "fields": {
+        "message": "First comment on first ticket from Shannon",
+        "date_entered": "2022-04-16T08:28:27.770Z",
+        "user": 2,
+        "ticketNum": 1
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 2,
+      "fields": {
+        "message": "Response to first comment on first ticket from Jared",
+        "date_entered": "2022-04-16T08:28:52.285Z",
+        "user": 1,
+        "ticketNum": 1
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 3,
+      "fields": {
+        "message": "I need help!!!",
+        "date_entered": "2022-04-16T08:29:35.806Z",
+        "user": 2,
+        "ticketNum": 2
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 4,
+      "fields": {
+        "message": "Issue resolved",
+        "date_entered": "2022-04-16T08:29:50.120Z",
+        "user": 1,
+        "ticketNum": 2
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 5,
+      "fields": {
+        "message": "I deleted the internet!",
+        "date_entered": "2022-04-16T08:30:43.647Z",
+        "user": 5,
+        "ticketNum": 6
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 6,
+      "fields": {
+        "message": "What?",
+        "date_entered": "2022-04-16T08:31:04.135Z",
+        "user": 1,
+        "ticketNum": 6
+      }
+    },
+    {
+      "model": "src.comment",
+      "pk": 7,
+      "fields": {
+        "message": "Try turning it off and back on again",
+        "date_entered": "2022-04-16T08:31:39.631Z",
+        "user": 4,
+        "ticketNum": 6
+      }
+    },
+    {
+      "model": "src.profile",
+      "pk": 1,
+      "fields": {
+        "username": 1,
+        "user_group": "T",
+        "user_ticket": [
+          2,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "model": "src.profile",
+      "pk": 2,
+      "fields": {
+        "username": 2,
+        "user_group": "U",
+        "user_ticket": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "model": "src.profile",
+      "pk": 3,
+      "fields": {
+        "username": 3,
+        "user_group": "U",
+        "user_ticket": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "model": "src.profile",
+      "pk": 4,
+      "fields": {
+        "username": 4,
+        "user_group": "T",
+        "user_ticket": [
+          6
+        ]
+      }
+    },
+    {
+      "model": "src.profile",
+      "pk": 5,
+      "fields": {
+        "username": 5,
+        "user_group": "U",
+        "user_ticket": [
+          6
+        ]
+      }
+    }
+    ]

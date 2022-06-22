@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+    {% block content %}
+    <div class="sign-in-form" style="width:450px; border-radius: 25px">
+      <form id="assign"  action="/unassign/" method="POST">
+          {% csrf_token %}
+        <h3>Would you like to be un-assigned from ticket:</h3>
+        <p>{{ticketTitle}}</p>
+
+        <input id = "ticket" type = "hidden" name = "ticketNum">
+        <script>
+          let ticketNum = new URLSearchParams(window.location.search).get('ticketNum');
+          document.getElementById("ticket").value = ticketNum;
+        </script>
+
+        <br><br>
+        {% if isAssigned == False %}
+        <p>You are not assigned to this ticket!</p>
+        <input type="submit" id="submit" value="Back" name = "submit" style="border-radius: 25px" >
+        {% else %}
+        <input type="submit" id="submit" value="Yes" name = "submit" style="border-radius: 25px" >
+        <input type="submit" id="submit" value="No" name = "submit" style="border-radius: 25px" >
+        {% endif %}
+
+      </form>
+        {{error}}
+
+    </div>
+    {% endblock %}

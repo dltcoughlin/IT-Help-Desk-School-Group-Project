@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+{% block head %}
+    {% load static %}
+
+    {% endblock %}
+    {% block content %}
+	  	  
+      <nav class="ticket-nav" style="border-radius: 25px">
+        <ul>
+          <li><a href="#" onclick="MyTickets()">My Tickets</a>
+          <li class="{{noshow}}"><a href="#" onclick="AllTickets()">All Tickets</a></li>
+          <li><a href="/newticket">Create Ticket</a></li>
+          <li><a href="#">Filter</a></li>
+          <ul style="width:200px;margin-left:10%;">
+			<table>
+				<tr>
+					<td>Search</td>
+					<td><input type="text" style="width:100px" placeholder="Search..." id="ticketSearch" onkeyup="TicketSearch()" required></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td><select name="status" onchange="TicketSearch()">
+							<option value="A">All</option>
+							<option value="O">Open</option>
+							<option value="C">Closed</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td>Assigned</td>
+					<td><select name="assigned" onchange="TicketSearch()">
+							<option value="A">All</option>
+							<option value="AS">Assigned</option>
+							<option value="NA">Not Assigned</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Priority</td>
+					<td><select name="priority" onchange="TicketSearch()">
+							<option value="A">All</option>
+							<option value="R">Routine</option>
+							<option value="U">Urgent</option>
+							<option value="E">Emergency</option>
+					</select></td>
+				</tr>
+		  </table>
+		  </ul>
+		  </li>
+			
+
+        </ul>
+      </nav>
+	  
+        <div class="ticketTable" id="ticketDiv" style="word-wrap: break-word">
+
+        {% for ticket in tickets %}
+        <div onclick="getTicketInfo('{{ticket.ticketNum}}')" class="ticketInfo">
+           <h3 class="subTicketHeaders">{{ticket.ticketNum}} - {{ticket.title}}</h3>		   
+	       <p class="subTicketHeaders">Status:
+           {% if ticket.status == "O" %}
+            Open
+            {% else %}
+            Closed
+            {% endif %}
+           </p>
+            <p class="{{ticket.priority}}">Priority:
+            {% if ticket.priority == "U" %}
+            Urgent
+            {% elif ticket.priority == "E" %}
+            Emergency
+            {% else %}
+            Routine
+            {% endif %}
+            </p>
+            <p class="subTicketHeaders">Assigned:
+            {% if ticket.is_assigned == True %}
+				<b class="assigned{{ticket.is_assigned}}">&#x2713;</b>
+            {% else %}
+				<b class="assigned{{ticket.is_assigned}}">&#x2715;</b>
+            {% endif %}
+            </p>
+            <p class="ticketP">Creation Date: {{ticket.date_created}}</p>
+            <p class="ticketP">Due Date: {{ticket.due_date}}</p>
+            <p class="ticketP">Last Checked: {{ticket.last_checked}}</p>
+
+       </div>
+
+      {% endfor %}
+    {% endblock %}
+    {% block scripts %}
+    <script type="text/javascript" src="{% static 'javascript/homefunc.js' %}"></script>
+    
+    {% endblock %}
+

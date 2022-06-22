@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+    {% block content %}
+    <div class="sign-in-form" style="border-radius: 25px">
+	  <h3>Login</h3>
+      <form id="sign-in"  action="/login/" method="POST">
+          {% csrf_token %}
+        
+        <input class="inputFields" name="username" placeholder="Username">
+        <br>
+        <br>
+        <input type="password" class="inputFields" name="password" placeholder="Password">
+        <br><br>
+        <input type="submit" id="submit" value="Submit" style="border-radius: 25px">
+      </form>
+        {{error}}
+
+    </div>
+    {% endblock %}
+

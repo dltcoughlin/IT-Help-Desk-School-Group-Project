@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.E {
+  color:red;
+  margin-left:4px;
+}
+
+.subTicketHeaders {
+  color:midnightblue;
+  padding: 5px;
+}
+
+.U {
+  color:orange;
+  margin-left:4px;
+}
+
+.R {
+  color:green;
+  margin-left:4px;
+}
+
+.ticketP {
+  display:inline;
+  margin-right:20px;
+  margin-left:4px;
+  color:midnightblue;
+}
+
+.page-header {
+  background: gainsboro;
+	padding:20px 50px 20px;
+	margin:0px;
+	font-family: 'Dosis', sans-serif;
+  left: 0;
+  top: 0;
+  color: darkblue;
+  }
+  
+.page-header a {
+	font-size: 16px;
+}
+ 
+img {
+  float:left;
+  width: 4 em;
+  height:4 em;
+  margin-right: 0.5em;
+}
+  
+.page-footer {
+  background: gainsboro;
+	padding:20px 50px 20px;
+	max-height:40px;
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  z-index:0;
+  text-align: left;
+  font-family: 'Dosis', sans-serif;
+  color: darkblue;
+	margin:0px;
+  }
+  
+/* Content : block between header & footer*/
+.content {
+margin:auto;
+font-family:Verdana;
+}
+  
+/* Home page - Menu */
+.ticket-nav {
+background-color: aliceblue;
+color: darkblue;
+float: left;
+margin:50px;
+padding: 35px 50px 35px 50px;
+border: 2px solid midnightblue;
+}
+  
+/* Home page - List of tickets */
+.ticketTable {
+  background-color: white; 
+  float: left;
+  padding: 14px;
+  width: calc(100vw - 520px);
+  overflow: unset;
+  margin-bottom:80px;
+  font-size: 14px;
+}
+
+.ticket-nav li a {
+  font-size: 18px;
+}
+
+td {
+  font-size: 16px;
+  line-height: 2;
+}
+
+table {
+  width:100%;
+}
+
+.ticketInfo:hover {
+  background-color: aliceblue;
+}
+.ticketInfo {
+padding-bottom:3px;
+border-bottom: 3px solid darkblue;
+}
+
+/* Login page */
+.sign-in-form {
+  margin: auto;
+margin-top:50px;
+padding: 35px 50px 35px 50px;
+border: 2px solid midnightblue;
+width: 260px;
+  background-color: aliceblue;
+  text-align: center;
+  font-size: 20px;
+  color: darkblue;
+  font-family: 'Dosis', sans-serif;
+}
+
+form {
+  padding:1em;
+}
+
+textarea{
+  font-family:Verdana;
+}
+
+.inputFields{
+  height: 2em;
+}
+
+#submit {
+  background-color: darkblue;
+  color: white;
+  width: 120px;
+  height: 2em;
+  border: none;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+#sublist {
+  font-size: 16px;
+  color: lightgray;
+}
+
+li {
+  padding: 0.25em;
+  font-size: 25px;
+}
+
+.assignedTrue {
+  color:green;
+  display:inline;
+}
+
+.assignedFalse {
+  color:red;
+  display:inline;
+}
+
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  background-color: #477a85;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #477a8550;
+}
+
+label::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #e8f5f7;
+  position: absolute;
+  border-radius: 70px;
+  top: 2px;
+  left: 3px;
+  transition: 0.5s;
+}
+
+input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+input:checked + label {
+  background-color: #243d42;
+}
+
+label:active:after {
+  width: 15px;
+}
+
+/* Stylings for single ticket view */
+#title {
+  font-size: 18px;
+  color: darkblue;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid darkblue;
+}
+
+#ticketInfo {
+  padding-left:10px;
+  font-size: 14px;
+  font-family: Verdana;
+  line-height:1.6;
+  color: midnightblue;
+}
+
+.noshow {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a.link {
+  text-decoration: underline;
+}

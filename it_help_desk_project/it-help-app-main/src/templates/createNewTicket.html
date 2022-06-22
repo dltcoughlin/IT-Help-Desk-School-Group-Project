@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+    {% block content %}
+    <div class="sign-in-form" style="width:600px; border-radius: 25px; padding-bottom: 10px">
+      <h3>Create New Ticket</h3> 
+	  <form id="newTicket"  action="/newticket/" method="POST">
+          {% csrf_token %}        
+          <input class="inputFields" style="width:500px;" name="title" placeholder="Summary of issue...">
+          <br>
+          
+          <h4>Priority</h4>
+          <select name="priority">
+              <option value="R">Routine</option>
+              <option value="U">Urgent</option>
+              <option value="E">Emergency</option>
+            </select>
+          <br>
+          
+          {% if currentUserGroup == 'T' %}
+	  <h4 style="padding-bottom: 5px">Create Ticket for User:</h4>
+          <select name="users">
+          {% for user in users %}
+            <option value="{{user.username}}">{{user.username}}</option>
+          {% endfor %}
+          </select>
+          <br>
+          {% endif %}
+
+         <h4 style="padding-bottom: 5px">Description</h4>
+         <textarea rows = "8" cols = "60" name = "description" placeholder="Please enter issue here..."></textarea>
+        <input type="submit" id="submit" value="Submit" style="border-radius: 25px">
+      </form>
+        {{error}}
+
+    </div>
+    {% endblock %}
